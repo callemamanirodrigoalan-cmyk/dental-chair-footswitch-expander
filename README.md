@@ -85,7 +85,37 @@ max release latency ≤300 ms after the key is let go).
 - **Isolation / output:** PC817 optocouplers (sink mode) driving the chair's panel switches
 - **Comms:** HC-05 Bluetooth **or** FTDI, 9600 8N1 (one at a time on the UART)
 - **Inputs:** 12 physical switches with debounce
-- **Custom PCBs:** designed in EasyEDA / KiCad (see `/hardware`)
+- **Custom PCBs:** designed in EasyEDA / KiCad — four boards (joystick, controller, and the
+  receiver/driver in both SMD and through-hole)
+
+### Board design
+
+**Joystick input board** — 4 of the 12 channels
+
+| PCB layout | 3D — top |
+|---|---|
+| ![Joystick PCB](hardware/joystick-board.png) | ![Joystick 3D top](hardware/joystick-board-3d-top.png) |
+
+**Controller — 12 switches + Bluetooth (SMD)**
+
+| PCB layout | 3D — top | 3D — bottom |
+|---|---|---|
+| ![Controller PCB](hardware/controller-switches-bluetooth-smd.png) | ![Controller 3D top](hardware/controller-switches-bluetooth-smd-3d-top.png) | ![Controller 3D bottom](hardware/controller-switches-bluetooth-smd-3d-botton.png) |
+
+**Receiver / driver board — SMD**
+
+| PCB layout | 3D — top | 3D — bottom |
+|---|---|---|
+| ![Receiver SMD PCB](hardware/receiver-driver-smd.png) | ![Receiver SMD 3D top](hardware/receiver-driver-smd-3d-top.png) | ![Receiver SMD 3D bottom](hardware/receiver-driver-smd-3d-botton.png) |
+
+**Receiver / driver board — through-hole (DIP)**
+
+| PCB layout | 3D — top | 3D — bottom |
+|---|---|---|
+| ![Receiver DIP PCB](hardware/receiver-driver-dip.png) | ![Receiver DIP 3D top](hardware/receiver-driver-dip-3d-top.png) | ![Receiver DIP 3D bottom](hardware/receiver-driver-dip-3d-botton.png) |
+
+*The receiver/driver board (PCF8574 expanders + PC817 optocouplers) was designed in both SMD and
+through-hole versions.*
 
 ### Resource usage
 - Flash: ~8 kB / 32 kB
